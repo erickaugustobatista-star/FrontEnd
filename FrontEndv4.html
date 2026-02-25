@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+  <html lang="PT-BR">
+      <head>
+          <title>FrontEnd</title>
+          <meta charset="utf-8">
+          <link rel="stylesheet" type="text/css" href="">
+          <script></script>
+      </head>
+      <style>
+          .body{
+            background-color: rgb(255, 255, 255);
+            color:rgb(0, 0, 0);
+          }
+          .texto{
+            color:rgb(0, 0, 0);
+          }
+          .submit{
+            background-color: rgb(0, 126, 0);
+          }
+          .foto{
+            background-image: url("https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRPkdC9WpsReTzB75J6omyysOreycJU0S9nZ5JU7JVGw4koZoLE");
+            width:300px;
+            height:200px;
+            background-size: 50%;
+            background-repeat: no-repeat;
+          }
+      </style>
+      <body class="body">
+
+          Bom dia, esse é o primeiro codigo de html
+        <form method="POST" action="index.php">
+            <fieldset>
+                <legend>Cadastro</legend>
+                Nome  <input type="text"><br>
+                Sobrenome <input type="text"><br>
+                Data de Nascimento <input type="date"><br>
+                M <input type="checkbox"><br>
+                F <input type="checkbox"><br>
+                Observações <input type="textArea"><br>
+                Canhoto <input type="radio"><br>
+                Destro <input type="radio"><br>
+                CPF <input type="number"><br>
+                RG  <input type="number"><br>
+                Endereço <input type="text"><br>
+                CEP <input type="number"><br>
+                <br>
+                <p class="texto">Usuario:</p> <input type="text" placeholder="Usuario" minlength="5" maxlength="10" required><br>
+                <p class="texto">Senha:</p>   <input type="password" placeholder="Senha" minlength="5" maxlength="10" required><br>
+                <input type="submit" value="Registrar" class="submit">
+            </fieldset>
+        </form>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQhc0J34id4I7RGbF-9xwPrEvVTejJuFN1uA&s" width="10%" height="10%">
+        <input type="image" src="https://media.tenor.com/0Fo8WIJ6D00AAAAM/wide-gragas-walkin-wide.gif" width="10%" height="10%">
+        <div class="foto"></div>
+      </body>
+  </html>
