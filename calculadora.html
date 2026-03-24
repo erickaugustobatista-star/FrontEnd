@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CALCULADORA</title>
+    <title>Document</title>
     <style>
         .campo{
             background-color: yellow;
@@ -36,45 +36,52 @@
         }
     </style>
     <script>
-            function adicionar(valor){
-                document.getElementById("campo").value += valor;
+        function adicionar(valor){
+            document.getElementById("campo").value += valor;
+        }
+        function limpar(){
+            document.getElementById("campo").value = "";
+        }
+        function calcular(){
+            var campo = document.getElementById("campo");
+            try{
+               campo.value = eval(campo.value); 
+            }catch(error){
+                campo.value ="Erro";
             }
-            function limpar(){
-                document.getElementById("campo").value = "";
-
-            }
+        }
     </script>
 </head>
 <body>
     <fieldset>
         <legend>CALCULADORA DO 2ºA</legend>
-        <input type="text" id="campo" class="campo"><br><br>
-        <button class="botao"onclick="adicionar('1')">1</button>
-        <button class="botao"onclick="adicionar('2')">2</button>
-        <button class="botao"onclick="adicionar('3')">3</button>
-        <button class="botao2">x</button>
-        <button class="botao2">^</button>
+        <input type="text" id="campo" onclick="adicionar('1')" class="campo"><br><br>
+        <button onclick="adicionar('1')" class="botao">1</button>
+        <button onclick="adicionar('2')" class="botao">2</button>
+        <button onclick="adicionar('3')" class="botao">3</button>
+        <button onclick="adicionar('*')" class="botao2">x</button>
+        <button onclick="adicionar('^')" class="botao2">^</button>
         <br>
-        <button class="botao"onclick="adicionar('4')">4</button>
-        <button class="botao"onclick="adicionar('5')">5</button>
-        <button class="botao"onclick="adicionar('6')">6</button>
-        <button class="botao2"onclick="adicionar('/')">/</button>
-        <button class="botao2"onclick="adicionar('(')">(</button>
+        <button onclick="adicionar('4')" class="botao">4</button>
+        <button onclick="adicionar('5')" class="botao">5</button>
+        <button onclick="adicionar('6')" class="botao">6</button>
+        <button onclick="adicionar('/')" class="botao2">/</button>
+        <button onclick="adicionar('(')" class="botao2">(</button>
         <br>
-        <button class="botao"onclick="adicionar('7')">7</button>
-        <button class="botao"onclick="adicionar('8')">8</button>
-        <button class="botao"onclick="adicionar('9')">9</button>
-        <button class="botao2"onclick="adicionar('+')">+</button>
-        <button class="botao2"onclick="adicionar(')')">)</button>
+        <button onclick="adicionar('7')" class="botao">7</button>
+        <button onclick="adicionar('8')" class="botao">8</button>
+        <button onclick="adicionar('9')" class="botao">9</button>
+        <button onclick="adicionar('+')" class="botao2">+</button>
+        <button onclick="adicionar(')')" class="botao2">)</button>
         <br>
-        <button class="botao2">*</button>
-        <button class="botao"onclick="adicionar('0')">0</button>
-        <button class="botao2"onclick="adicionar('#')">#</button>
-        <button class="botao2"onclick="adicionar('-')">-</button>
-        <button class="botao2"onclick="adicionar('%')">%</button>
+        <button onclick="adicionar('.')" class="botao2">.</button>
+        <button onclick="adicionar('0')" class="botao">0</button>
+        <button onclick="adicionar(',')" class="botao2">,</button>
+        <button onclick="adicionar('-')" class="botao2">-</button>
+        <button onclick="adicionar('%')" class="botao2">%</button>
         <br>
-        <button class="botao3"onclick="limpar()">C</button>
-        <button class="botao4"onclick="adicionar('=')">=</button>
+        <button onclick="limpar()" class="botao3">C</button>
+        <button onclick="calcular()" class="botao4">=</button>
     </fieldset>
 </body>
 </html>
