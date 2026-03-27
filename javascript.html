@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Site Legal</title>
+    <style>
+        /* Estilização básica */
+        body {
+            font-family: sans-serif;
+            text-align: center;
+            padding: 20px;
+            background: #f4f4f9;
+        }
+
+        nav {
+            margin-bottom: 30px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: white;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Esconde todas as telas por padrão */
+        .tela {
+            display: none;
+            padding: 50px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background: white;
+        }
+
+        /* Classe para mostrar a tela ativa */
+        .ativa {
+            display: block;
+            animation: fadeIn 0.5s;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <button onclick="mudarTela('Sobre Mim')">Sobre Mim</button>
+        <button onclick="mudarTela('Formação')">Formação</button>
+        <button onclick="mudarTela('Portfólio')">Portfólio</button>
+        <button onclick="mudarTela('Contato')">Contato</button>
+    </nav>
+
+    <div id="Sobre Mim" class="tela ativa">
+        <h1>Sobre mim!</h1>
+        <p>Meu nome é Erick.</p>
+        <p>Hobbies: Meu hobbie é jogar vôlei</p>
+        </p>
+
+    </div>
+
+    <div id="Formação" class="tela">
+        <h1>Formação</h1>
+        <p>Cursando: Ensino Médio, curso de Introdução a Computação</p>
+    </div>
+
+    <div id="Portfólio" class="tela">
+        <h1>Portfólio</h1>
+       <p> <a href="https://github.com/erickaugustobatista-star/FrontEnd"></a></p>
+    </div>
+
+    <div id="Contato" class="tela">
+        <h1>Fale Comigo</h1>
+        <p>Email: erick.augusto.batista@escola.pr.gov.br</p>
+    </div>
+
+    <script>
+        function mudarTela(idTela) {
+            // 1. Seleciona todas as telas
+            const telas = document.querySelectorAll('.tela');
+
+            // 2. Remove a classe 'ativa' de todas elas (esconde)
+            telas.forEach(tela => {
+                tela.classList.remove('ativa');
+            });
+
+            // 3. Adiciona a classe 'ativa' apenas na tela clicada (mostra)
+            const telaDesejada = document.getElementById(idTela);
+            telaDesejada.classList.add('ativa');
+        }
+    </script>
+
+</body>
+
+</html>
